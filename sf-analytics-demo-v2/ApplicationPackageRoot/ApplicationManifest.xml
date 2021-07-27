@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ApplicationManifest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ApplicationTypeName="sf_analytics_demo_v2Type" ApplicationTypeVersion="1.0.0" xmlns="http://schemas.microsoft.com/2011/01/fabric">
+  <Parameters>
+    <Parameter Name="BackfillWorkerService_InstanceCount" DefaultValue="-1" />
+    <Parameter Name="AlgorithmStateWorkerService_InstanceCount" DefaultValue="-1" />
+    <Parameter Name="DustinTracyStorage.Service_MinReplicaSetSize" DefaultValue="2" />
+    <Parameter Name="DustinTracyStorage.Service_PartitionCount" DefaultValue="1" />
+    <Parameter Name="DustinTracyStorage.Service_TargetReplicaSetSize" DefaultValue="2" />
+    <Parameter Name="ChoiStorage.Service_MinReplicaSetSize" DefaultValue="2" />
+    <Parameter Name="ChoiStorage.Service_PartitionCount" DefaultValue="1" />
+    <Parameter Name="ChoiStorage.Service_TargetReplicaSetSize" DefaultValue="2" />
+    <Parameter Name="CrouterStorage.Service_MinReplicaSetSize" DefaultValue="2" />
+    <Parameter Name="CrouterStorage.Service_PartitionCount" DefaultValue="1" />
+    <Parameter Name="CrouterStorage.Service_TargetReplicaSetSize" DefaultValue="2" />
+    <Parameter Name="CountsStorage.Service_MinReplicaSetSize" DefaultValue="2" />
+    <Parameter Name="CountsStorage.Service_PartitionCount" DefaultValue="1" />
+    <Parameter Name="CountsStorage.Service_TargetReplicaSetSize" DefaultValue="2" />
+    <Parameter Name="AnalyticsJobsService_InstanceCount" DefaultValue="-1" />
+    <Parameter Name="Analytics.Api_ASPNETCORE_ENVIRONMENT" DefaultValue="" />
+    <Parameter Name="Analytics.Api_InstanceCount" DefaultValue="-1" />
+    <Parameter Name="SubjectActorService_PartitionCount" DefaultValue="10" />
+    <Parameter Name="SubjectActorService_MinReplicaSetSize" DefaultValue="3" />
+    <Parameter Name="SubjectActorService_TargetReplicaSetSize" DefaultValue="3" />
+    <Parameter Name="JobActorService_PartitionCount" DefaultValue="10" />
+    <Parameter Name="JobActorService_MinReplicaSetSize" DefaultValue="3" />
+    <Parameter Name="JobActorService_TargetReplicaSetSize" DefaultValue="3" />
+    <Parameter Name="TaskOrchestratorActorService_PartitionCount" DefaultValue="10" />
+    <Parameter Name="TaskOrchestratorActorService_MinReplicaSetSize" DefaultValue="3" />
+    <Parameter Name="TaskOrchestratorActorService_TargetReplicaSetSize" DefaultValue="3" />
+    <Parameter Name="EpochRetrievalActorService_PartitionCount" DefaultValue="10" />
+    <Parameter Name="EpochRetrievalActorService_MinReplicaSetSize" DefaultValue="3" />
+    <Parameter Name="EpochRetrievalActorService_TargetReplicaSetSize" DefaultValue="3" />
+    <Parameter Name="CountsWorkerActorService_PartitionCount" DefaultValue="10" />
+    <Parameter Name="CountsWorkerActorService_MinReplicaSetSize" DefaultValue="3" />
+    <Parameter Name="CountsWorkerActorService_TargetReplicaSetSize" DefaultValue="3" />
+    <Parameter Name="ChoiWorkerActorService_PartitionCount" DefaultValue="10" />
+    <Parameter Name="ChoiWorkerActorService_MinReplicaSetSize" DefaultValue="3" />
+    <Parameter Name="ChoiWorkerActorService_TargetReplicaSetSize" DefaultValue="3" />
+    <Parameter Name="CrouterWorkerActorService_PartitionCount" DefaultValue="10" />
+    <Parameter Name="CrouterWorkerActorService_MinReplicaSetSize" DefaultValue="3" />
+    <Parameter Name="CrouterWorkerActorService_TargetReplicaSetSize" DefaultValue="3" />
+    <Parameter Name="DustinTracyWorkerActorService_PartitionCount" DefaultValue="10" />
+    <Parameter Name="DustinTracyWorkerActorService_MinReplicaSetSize" DefaultValue="3" />
+    <Parameter Name="DustinTracyWorkerActorService_TargetReplicaSetSize" DefaultValue="3" />
+  </Parameters>
+  <!-- Import the ServiceManifest from the ServicePackage. The ServiceManifestName and ServiceManifestVersion 
+       should match the Name and Version attributes of the ServiceManifest element defined in the 
+       ServiceManifest.xml file. -->
+  <ServiceManifestImport>
+    <ServiceManifestRef ServiceManifestName="BackfillWorkerServicePkg" ServiceManifestVersion="1.0.0" />
+    <ConfigOverrides />
+  </ServiceManifestImport>
+  <ServiceManifestImport>
+    <ServiceManifestRef ServiceManifestName="AlgorithmStateWorkerServicePkg" ServiceManifestVersion="1.0.0" />
+    <ConfigOverrides />
+  </ServiceManifestImport>
+  <ServiceManifestImport>
+    <ServiceManifestRef ServiceManifestName="DustinTracyStorage.ServicePkg" ServiceManifestVersion="1.0.0" />
+    <ConfigOverrides />
+  </ServiceManifestImport>
+  <ServiceManifestImport>
+    <ServiceManifestRef ServiceManifestName="ChoiStorage.ServicePkg" ServiceManifestVersion="1.0.0" />
+    <ConfigOverrides />
+  </ServiceManifestImport>
+  <ServiceManifestImport>
+    <ServiceManifestRef ServiceManifestName="CrouterStorage.ServicePkg" ServiceManifestVersion="1.0.0" />
+    <ConfigOverrides />
+  </ServiceManifestImport>
+  <ServiceManifestImport>
+    <ServiceManifestRef ServiceManifestName="CrouterWorkerActorPkg" ServiceManifestVersion="1.0.0" />
+  </ServiceManifestImport>
+  <ServiceManifestImport>
+    <ServiceManifestRef ServiceManifestName="DustinTracyWorkerActorPkg" ServiceManifestVersion="1.0.0" />
+  </ServiceManifestImport>
+  <ServiceManifestImport>
+    <ServiceManifestRef ServiceManifestName="ChoiWorkerActorPkg" ServiceManifestVersion="1.0.0" />
+  </ServiceManifestImport>
+  <ServiceManifestImport>
+    <ServiceManifestRef ServiceManifestName="CountsStorage.ServicePkg" ServiceManifestVersion="1.0.0" />
+    <ConfigOverrides />
+  </ServiceManifestImport>
+  <ServiceManifestImport>
+    <ServiceManifestRef ServiceManifestName="CountsWorkerActorPkg" ServiceManifestVersion="1.0.0" />
+  </ServiceManifestImport>
+  <ServiceManifestImport>
+    <ServiceManifestRef ServiceManifestName="EpochRetrievalActorPkg" ServiceManifestVersion="1.0.0" />
+  </ServiceManifestImport>
+  <ServiceManifestImport>
+    <ServiceManifestRef ServiceManifestName="TaskOrchestratorActorPkg" ServiceManifestVersion="1.0.0" />
+  </ServiceManifestImport>
+  <ServiceManifestImport>
+    <ServiceManifestRef ServiceManifestName="AnalyticsJobsServicePkg" ServiceManifestVersion="1.0.0" />
+    <ConfigOverrides />
+  </ServiceManifestImport>
+  <ServiceManifestImport>
+    <ServiceManifestRef ServiceManifestName="JobActorPkg" ServiceManifestVersion="1.0.0" />
+  </ServiceManifestImport>
+  <ServiceManifestImport>
+    <ServiceManifestRef ServiceManifestName="SubjectActorPkg" ServiceManifestVersion="1.0.0" />
+  </ServiceManifestImport>
+  <ServiceManifestImport>
+    <ServiceManifestRef ServiceManifestName="Analytics.ApiPkg" ServiceManifestVersion="1.0.0" />
+    <ConfigOverrides />
+    <EnvironmentOverrides CodePackageRef="code">
+      <EnvironmentVariable Name="ASPNETCORE_ENVIRONMENT" Value="[Analytics.Api_ASPNETCORE_ENVIRONMENT]" />
+    </EnvironmentOverrides>
+  </ServiceManifestImport>
+  <DefaultServices>
+    <!-- The section below creates instances of service types, when an instance of this 
+         application type is created. You can also create one or more instances of service type using the 
+         ServiceFabric PowerShell module.
+         
+         The attribute ServiceTypeName below must match the name defined in the imported ServiceManifest.xml file. -->
+    <Service Name="BackfillWorkerService" ServicePackageActivationMode="ExclusiveProcess">
+      <StatelessService ServiceTypeName="BackfillWorkerServiceType" InstanceCount="[BackfillWorkerService_InstanceCount]">
+        <SingletonPartition />
+      </StatelessService>
+    </Service>
+    <Service Name="AlgorithmStateWorkerService" ServicePackageActivationMode="ExclusiveProcess">
+      <StatelessService ServiceTypeName="AlgorithmStateWorkerServiceType" InstanceCount="[AlgorithmStateWorkerService_InstanceCount]">
+        <SingletonPartition />
+      </StatelessService>
+    </Service>
+    <Service Name="DustinTracyStorage.Service" ServicePackageActivationMode="ExclusiveProcess">
+      <StatefulService ServiceTypeName="DustinTracyStorage.ServiceType" TargetReplicaSetSize="[DustinTracyStorage.Service_TargetReplicaSetSize]" MinReplicaSetSize="[DustinTracyStorage.Service_MinReplicaSetSize]">
+        <UniformInt64Partition PartitionCount="[DustinTracyStorage.Service_PartitionCount]" LowKey="-9223372036854775808" HighKey="9223372036854775807" />
+      </StatefulService>
+    </Service>
+    <Service Name="ChoiStorage.Service" ServicePackageActivationMode="ExclusiveProcess">
+      <StatefulService ServiceTypeName="ChoiStorage.ServiceType" TargetReplicaSetSize="[ChoiStorage.Service_TargetReplicaSetSize]" MinReplicaSetSize="[ChoiStorage.Service_MinReplicaSetSize]">
+        <UniformInt64Partition PartitionCount="[ChoiStorage.Service_PartitionCount]" LowKey="-9223372036854775808" HighKey="9223372036854775807" />
+      </StatefulService>
+    </Service>
+    <Service Name="CrouterStorage.Service" ServicePackageActivationMode="ExclusiveProcess">
+      <StatefulService ServiceTypeName="CrouterStorage.ServiceType" TargetReplicaSetSize="[CrouterStorage.Service_TargetReplicaSetSize]" MinReplicaSetSize="[CrouterStorage.Service_MinReplicaSetSize]">
+        <UniformInt64Partition PartitionCount="[CrouterStorage.Service_PartitionCount]" LowKey="-9223372036854775808" HighKey="9223372036854775807" />
+      </StatefulService>
+    </Service>
+    <Service Name="CountsStorage.Service" ServicePackageActivationMode="ExclusiveProcess">
+      <StatefulService ServiceTypeName="CountsStorage.ServiceType" TargetReplicaSetSize="[CountsStorage.Service_TargetReplicaSetSize]" MinReplicaSetSize="[CountsStorage.Service_MinReplicaSetSize]">
+        <UniformInt64Partition PartitionCount="[CountsStorage.Service_PartitionCount]" LowKey="-9223372036854775808" HighKey="9223372036854775807" />
+      </StatefulService>
+    </Service>
+    <Service Name="AnalyticsJobsService" ServicePackageActivationMode="ExclusiveProcess">
+      <StatelessService ServiceTypeName="AnalyticsJobsServiceType" InstanceCount="[AnalyticsJobsService_InstanceCount]">
+        <SingletonPartition />
+      </StatelessService>
+    </Service>
+    <Service Name="Analytics.Api" ServicePackageActivationMode="ExclusiveProcess">
+      <StatelessService ServiceTypeName="Analytics.ApiType" InstanceCount="[Analytics.Api_InstanceCount]">
+        <SingletonPartition />
+      </StatelessService>
+    </Service>
+    <Service Name="SubjectActorService" GeneratedIdRef="0fc0aa5d-28ed-487d-839b-1f2751447fb4|Volatile">
+      <StatefulService ServiceTypeName="SubjectActorServiceType" TargetReplicaSetSize="[SubjectActorService_TargetReplicaSetSize]" MinReplicaSetSize="[SubjectActorService_MinReplicaSetSize]">
+        <UniformInt64Partition PartitionCount="[SubjectActorService_PartitionCount]" LowKey="-9223372036854775808" HighKey="9223372036854775807" />
+      </StatefulService>
+    </Service>
+    <Service Name="JobActorService" GeneratedIdRef="1c073446-ee5d-4425-87ae-45556f832334|Volatile">
+      <StatefulService ServiceTypeName="JobActorServiceType" TargetReplicaSetSize="[JobActorService_TargetReplicaSetSize]" MinReplicaSetSize="[JobActorService_MinReplicaSetSize]">
+        <UniformInt64Partition PartitionCount="[JobActorService_PartitionCount]" LowKey="-9223372036854775808" HighKey="9223372036854775807" />
+      </StatefulService>
+    </Service>
+    <Service Name="TaskOrchestratorActorService" GeneratedIdRef="9a4e46a5-7286-47d2-ad18-0285b9c8e96b|Persisted">
+      <StatefulService ServiceTypeName="TaskOrchestratorActorServiceType" TargetReplicaSetSize="[TaskOrchestratorActorService_TargetReplicaSetSize]" MinReplicaSetSize="[TaskOrchestratorActorService_MinReplicaSetSize]">
+        <UniformInt64Partition PartitionCount="[TaskOrchestratorActorService_PartitionCount]" LowKey="-9223372036854775808" HighKey="9223372036854775807" />
+      </StatefulService>
+    </Service>
+    <Service Name="EpochRetrievalActorService" GeneratedIdRef="d74f15e9-0be7-4041-970f-6112f6d95975|Persisted">
+      <StatefulService ServiceTypeName="EpochRetrievalActorServiceType" TargetReplicaSetSize="[EpochRetrievalActorService_TargetReplicaSetSize]" MinReplicaSetSize="[EpochRetrievalActorService_MinReplicaSetSize]">
+        <UniformInt64Partition PartitionCount="[EpochRetrievalActorService_PartitionCount]" LowKey="-9223372036854775808" HighKey="9223372036854775807" />
+      </StatefulService>
+    </Service>
+    <Service Name="CountsWorkerActorService" GeneratedIdRef="0158d74e-4f8f-4e99-b385-16c5387683cd|Volatile">
+      <StatefulService ServiceTypeName="CountsWorkerActorServiceType" TargetReplicaSetSize="[CountsWorkerActorService_TargetReplicaSetSize]" MinReplicaSetSize="[CountsWorkerActorService_MinReplicaSetSize]">
+        <UniformInt64Partition PartitionCount="[CountsWorkerActorService_PartitionCount]" LowKey="-9223372036854775808" HighKey="9223372036854775807" />
+      </StatefulService>
+    </Service>
+    <Service Name="ChoiWorkerActorService" GeneratedIdRef="242bd2cf-721c-4a95-bdb5-026c1bcfc41f|Volatile">
+      <StatefulService ServiceTypeName="ChoiWorkerActorServiceType" TargetReplicaSetSize="[ChoiWorkerActorService_TargetReplicaSetSize]" MinReplicaSetSize="[ChoiWorkerActorService_MinReplicaSetSize]">
+        <UniformInt64Partition PartitionCount="[ChoiWorkerActorService_PartitionCount]" LowKey="-9223372036854775808" HighKey="9223372036854775807" />
+      </StatefulService>
+    </Service>
+    <Service Name="CrouterWorkerActorService" GeneratedIdRef="668425ef-f314-401a-8da6-6a6ba76ddc1c|Volatile">
+      <StatefulService ServiceTypeName="CrouterWorkerActorServiceType" TargetReplicaSetSize="[CrouterWorkerActorService_TargetReplicaSetSize]" MinReplicaSetSize="[CrouterWorkerActorService_MinReplicaSetSize]">
+        <UniformInt64Partition PartitionCount="[CrouterWorkerActorService_PartitionCount]" LowKey="-9223372036854775808" HighKey="9223372036854775807" />
+      </StatefulService>
+    </Service>
+    <Service Name="DustinTracyWorkerActorService" GeneratedIdRef="7592bdb9-d2f1-46a5-9566-157f764ad1ea|Volatile">
+      <StatefulService ServiceTypeName="DustinTracyWorkerActorServiceType" TargetReplicaSetSize="[DustinTracyWorkerActorService_TargetReplicaSetSize]" MinReplicaSetSize="[DustinTracyWorkerActorService_MinReplicaSetSize]">
+        <UniformInt64Partition PartitionCount="[DustinTracyWorkerActorService_PartitionCount]" LowKey="-9223372036854775808" HighKey="9223372036854775807" />
+      </StatefulService>
+    </Service>
+  </DefaultServices>
+</ApplicationManifest>

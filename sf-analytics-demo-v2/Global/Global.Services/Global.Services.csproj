@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\AlgorithmStateWorker\AlgorithmStateWorker.Interface\AlgorithmStateWorker.Interface.csproj" />
+    <ProjectReference Include="..\..\AlgorithmWorkers\ChoiWorker\ChoiWorkerActor.Interfaces\ChoiWorkerActor.Interfaces.csproj" />
+    <ProjectReference Include="..\..\AlgorithmWorkers\CountsWorker\CountsWorkerActor.Interfaces\CountsWorkerActor.Interfaces.csproj" />
+    <ProjectReference Include="..\..\AlgorithmWorkers\CrouterWorker\CrouterWorkerActor.Interfaces\CrouterWorkerActor.Interfaces.csproj" />
+    <ProjectReference Include="..\..\AlgorithmWorkers\DustinTracyWorker\DustinTracyWorkerActor.Interfaces\DustinTracyWorkerActor.Interfaces.csproj" />
+    <ProjectReference Include="..\..\AnalyticsJobsService\AnalyticsJobsService.Interface\AnalyticsJobsService.Interface.csproj" />
+    <ProjectReference Include="..\..\BackfillWorker\BackfillWorker.Interface\BackfillWorker.Interface.csproj" />
+    <ProjectReference Include="..\..\EpochRetrieval\EpochRetrievalActor.Interfaces\EpochRetrievalActor.Interfaces.csproj" />
+    <ProjectReference Include="..\..\JobServices\JobActor.Interfaces\JobActor.Interfaces.csproj" />
+    <ProjectReference Include="..\..\StorageWorkers\ChoiStorage\ChoiStorage.Interface\ChoiStorage.Interface.csproj" />
+    <ProjectReference Include="..\..\StorageWorkers\CountsStorage\CountsStorage.Interface\CountsStorage.Interface.csproj" />
+    <ProjectReference Include="..\..\StorageWorkers\CrouterStorage\CrouterStorage.Interface\CrouterStorage.Interface.csproj" />
+    <ProjectReference Include="..\..\StorageWorkers\DustinTracy\DustinTracyStorage.Interface\DustinTracyStorage.Interface.csproj" />
+    <ProjectReference Include="..\..\SubjectServices\SubjectActor.Interfaces\SubjectActor.Interfaces.csproj" />
+    <ProjectReference Include="..\..\TaskOrchestrator\TaskOrchestratorActor.Interfaces\TaskOrchestratorActor.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>

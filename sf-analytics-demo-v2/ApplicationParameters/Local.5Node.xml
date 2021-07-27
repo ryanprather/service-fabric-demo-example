@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="fabric:/sf_analytics_demo_v2" xmlns="http://schemas.microsoft.com/2011/01/fabric">
+  <Parameters>
+    <Parameter Name="BackfillWorkerService_InstanceCount" Value="1" />
+    <Parameter Name="AlgorithmStateWorkerService_InstanceCount" Value="1" />
+    <Parameter Name="DustinTracyStorage.Service_PartitionCount" Value="1" />
+    <Parameter Name="DustinTracyStorage.Service_MinReplicaSetSize" Value="3" />
+    <Parameter Name="DustinTracyStorage.Service_TargetReplicaSetSize" Value="3" />
+    <Parameter Name="ChoiStorage.Service_PartitionCount" Value="1" />
+    <Parameter Name="ChoiStorage.Service_MinReplicaSetSize" Value="3" />
+    <Parameter Name="ChoiStorage.Service_TargetReplicaSetSize" Value="3" />
+    <Parameter Name="CrouterStorage.Service_PartitionCount" Value="1" />
+    <Parameter Name="CrouterStorage.Service_MinReplicaSetSize" Value="3" />
+    <Parameter Name="CrouterStorage.Service_TargetReplicaSetSize" Value="3" />
+    <Parameter Name="CountsStorage.Service_PartitionCount" Value="1" />
+    <Parameter Name="CountsStorage.Service_MinReplicaSetSize" Value="3" />
+    <Parameter Name="CountsStorage.Service_TargetReplicaSetSize" Value="3" />
+    <Parameter Name="AnalyticsJobsService_InstanceCount" Value="1" />
+    <Parameter Name="Analytics.Api_ASPNETCORE_ENVIRONMENT" Value="Development" />
+    <Parameter Name="Analytics.Api_InstanceCount" Value="1" />
+    <Parameter Name="SubjectActorService_PartitionCount" Value="1" />
+    <Parameter Name="JobActorService_PartitionCount" Value="1" />
+    <Parameter Name="TaskOrchestratorActorService_PartitionCount" Value="1" />
+    <Parameter Name="EpochRetrievalActorService_PartitionCount" Value="1" />
+    <Parameter Name="CountsWorkerActorService_PartitionCount" Value="1" />
+    <Parameter Name="ChoiWorkerActorService_PartitionCount" Value="1" />
+    <Parameter Name="CrouterWorkerActorService_PartitionCount" Value="1" />
+    <Parameter Name="DustinTracyWorkerActorService_PartitionCount" Value="1" />
+  </Parameters>
+</Application>

@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <IsServiceFabricServiceProject>True</IsServiceFabricServiceProject>
+    <ServerGarbageCollection>True</ServerGarbageCollection>
+    <RuntimeIdentifier>win7-x64</RuntimeIdentifier>
+    <TargetLatestRuntimePatch>False</TargetLatestRuntimePatch>
+    <UpdateServiceFabricManifestEnabled>True</UpdateServiceFabricManifestEnabled>
+    <ServicePackagePath>PackageRoot</ServicePackagePath>
+    <ServicePackagePrefix>$(MSBuildProjectName)</ServicePackagePrefix>
+    <FabActUtilWorkingDir>$(BaseIntermediateOutputPath)\FabActUtilTemp</FabActUtilWorkingDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ServiceFabric.Actors" Version="3.4.664" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Global\Global.Services\Global.Services.csproj" />
+    <ProjectReference Include="..\..\..\StorageWorkers\CountsStorage\CountsStorage.Interface\CountsStorage.Interface.csproj" />
+    <ProjectReference Include="..\..\..\StorageWorkers\CountsStorage\CountsStorage.Models\CountsStorage.Models.csproj" />
+    <ProjectReference Include="..\..\AlgorithmWorker.Models\AlgorithmWorker.Models.csproj" />
+    <ProjectReference Include="..\CountsWorkerActor.Interfaces\CountsWorkerActor.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>

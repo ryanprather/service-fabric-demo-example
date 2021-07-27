@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/2011/01/fabric">
+  <Section Name="SubjectActorServiceReplicatorConfig">
+    <Parameter Name="ReplicatorEndpoint" Value="SubjectActorServiceReplicatorEndpoint" />
+    <Parameter Name="BatchAcknowledgementInterval" Value="0.005" />
+  </Section>
+  <Section Name="SubjectActorServiceReplicatorSecurityConfig">
+    <Parameter Name="CredentialType" Value="None" />
+  </Section>
+  <Section Name="ConnectionStrings">
+    <Parameter Name="AnalyticsJobsDbConnectionString" Value="Server=tcp:s470999-sqlserver.database.windows.net,1433;Initial Catalog=s470999-analyticsjobs;Persist Security Info=False;User ID=sasqluser;Password=ActiP@ss678!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" />
+  </Section>
+  <Section Name="ApplicationInsights">
+    <Parameter Name="InstrumentationKey" Value=" 78c89a14-bdb0-4ce8-8b50-3d5009c75c34" />
+  </Section>
+</Settings>
